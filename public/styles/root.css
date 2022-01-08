@@ -1,0 +1,8 @@
+.window {
+    height: calc(100vh - 10px);
+    background-color: white;
+}
+
+body {
+    background-color: #555;
+}

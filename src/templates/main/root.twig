@@ -1,5 +1,16 @@
 {% extends "index.twig" %}
-
+{% set window = true %}
+{% block css %}
+    <link rel="stylesheet" href="/styles/root.css">
+{% endblock %}
 {% block body %}
 
+{% endblock %}
+
+{% block js %}
+<script>
+    $(".close").on('click', () => {
+        window.close();
+    });
+</script>
 {% endblock %}

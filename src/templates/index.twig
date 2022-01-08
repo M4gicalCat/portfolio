@@ -20,6 +20,9 @@
     {% if window == true %}
         <div class="window">
             <div class="window-bar">
+                {% if windowTitle is defined %}
+                    <span class="window-title">{{ windowTitle }}</span>
+                {% endif %}
                 <span class="diminish">−</span>
                 <span class="fullscreen">□</span>
                 <span class="close">✕</span>
