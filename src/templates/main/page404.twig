@@ -1,0 +1,18 @@
+{% extends "index.twig" %}
+{% set window = true %}
+{% block css %}
+<link rel="stylesheet" href="/styles/page404.css">
+{% endblock %}
+{% block body %}
+    <h1>Error 404</h1>
+    <div>
+        <p>
+            Cette page n'est pas ou plus disponible.
+            Souhaitez vous : <span class="link pointer">Revenir en arrière</span> ou <a href="/" class="link">Retourner à l'accueil</a> ?
+        </p>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="/scripts/page404.js" type="module"></script>
+{% endblock %}

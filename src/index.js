@@ -30,9 +30,13 @@ app.use((req, res, next) => {
     return next();
 });
 
-for (let i = 0; i < routers.length; i++) {
-    app.use(routers[i]);
-}
+routers.forEach(r => app.use(r));
+
+app.use((req, res) => {
+    discordController.handleRoute404Connection(req, client);
+    expressController.handleRoute404Connection(req, client);
+    res.render("main/page404");
+});
 
 app.listen(config.port, ()=>{
     console.log("Server listening on http://localhost:" + config.port);

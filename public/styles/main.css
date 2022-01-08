@@ -1,0 +1,65 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.link {
+    color: #1487e5;
+    text-decoration: underline;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.window {
+    border: 5px #555 solid;
+    border-radius: 12px;
+}
+
+.window > .window-bar {
+    border: 1px #555 solid;
+    margin: 0;
+    left: -1px;
+    right: 0;
+    background-color: #555;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.window > .window-bar > * {
+    cursor: pointer;
+    margin: 0.5em;
+}
+
+.window > .screen {
+    margin: 5%;
+}
+
+.window > .window-bar > .close {
+    width: 1.2em;
+    height: 1.2em;
+    background-color: #FF0033;
+    border-radius: 50%;
+}
+
+.window > .window-bar > .diminish {
+    width: 1.2em;
+    height: 1.2em;
+    background-color: #FF7030;
+    border-radius: 100%;
+    margin-right: 0.5em;
+}
+
+.window > .window-bar > .fullscreen {
+    width: 1.2em;
+    height: 1.2em;
+    color: black;
+    background-color: #33ff33;
+    border-radius: 100%;
+    margin-right: 0.5em;
+}
+

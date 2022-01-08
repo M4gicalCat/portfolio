@@ -4,19 +4,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Philippe FAISANDIER - M4gicalCat</title>
-    <meta name="description" content="My portfolio">
+    <meta name="description" content="M4gicalCat's portfolio">
     <meta name="author" content="M4gicalCat">
 
     <link rel="icon" href="/img/favicon.ico">
     <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+    <link rel="stylesheet" href="/styles/main.css">
     {% block css %}
     {% endblock %}
 </head>
 
 <body>
-{% block body %}
+
+{% block window %}
+    {% if window == true %}
+        <div class="window">
+            <div class="window-bar">
+                <span class="diminish">−</span>
+                <span class="fullscreen">□</span>
+                <span class="close">✕</span>
+            </div>
+            <div class="screen">
+    {% endif %}
+
+    {% block body %}
+    {% endblock %}
+
+    {% if window == true %}
+            </div>
+        </div>
+    {% endif %}
 {% endblock %}
-cc
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 {% block js %}
 {% endblock %}
 </body>
