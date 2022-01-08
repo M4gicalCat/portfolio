@@ -2,9 +2,11 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "M4gicalCat's portfolio",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "node index.js",
+    "dev": "nodemon src/index.js"
   },
   "keywords": [
     "portfolio"
@@ -12,7 +14,9 @@
   "author": "M4gicalCat",
   "license": "ISC",
   "dependencies": {
+    "discord.js": "^13.5.0",
     "express": "^4.17.1",
+    "mysql2": "^2.3.3",
     "nunjucks": "^3.2.3"
   }
 }
