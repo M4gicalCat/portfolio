@@ -1,8 +1,29 @@
-.window {
-    height: calc(100vh - 10px);
-    background-color: white;
+#head-container {
+    width: 100%;
+    background-color: #00ABAB
 }
 
-body {
-    background-color: #555;
+#body-container {
+    margin: 0 7vw;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5em;
+}
+
+.italic {
+    font-style: italic;
+}
+
+#about-me {
+    margin: 0 7vw;
+    text-align: justify;
+    padding-bottom: 5vh;
+}
+
+.indent {
+    text-indent: 2em;
 }

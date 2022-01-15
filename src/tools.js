@@ -10,3 +10,15 @@ module.exports.getDate = () => {
         day = '0' + day;
     return `${day}-${month}-${year}`
 }
+
+module.exports.getAge = () => {
+    let today = new Date();
+    let birthDate = new Date(`04-14-2003`);
+    let age = today.getFullYear() - birthDate.getFullYear();
+    let m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
+
+}

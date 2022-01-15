@@ -11,6 +11,7 @@ const nunjucks = require("nunjucks");
 const express = require("express");
 const app = express();
 const expressController = require("./controller/express.controller");
+const {sendMessage} = require("./controller/discord.controller");
 const routers = [];
 routers.push(require("./route/main.route.js").router);
 /* EXPRESS */
@@ -46,4 +47,6 @@ app.listen(config.port, ()=>{
 
 client.login(config.token).then(() => {
     console.log("Discord client is connected");
+    const date = new Date();
+    sendMessage("Client connected at " + date.getHours() + ":" + date.getMinutes(), client);
 });

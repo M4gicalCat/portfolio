@@ -1,16 +1,72 @@
 {% extends "index.twig" %}
-{% set window = true %}
 {% block css %}
     <link rel="stylesheet" href="/styles/root.css">
 {% endblock %}
 {% block body %}
+    <div id="head-container">
+        <div class="title-container">
+            <h1 id="name">Philippe FAISANDIER</h1>
+            <span class="italic">Développeur web fullstack</span>
+        </div>
+        <div id="about-me">
+            <h3>À propos de moi</h3>
+            <p class="indent">
+                Développeur web de {{ age }} ans, je suis très curieux et j'aime apprendre de nouvelles choses.
+                J'ai commencé la programmation en première avec l'option ICN (Informatique et Création Numérique),
+                pour continuer en DUT Informatique.<br>
+                Cependant, je ne m'arrête pas à ça.
+                Je suis en effet clarinettiste depuis mes 9 ans,
+                et je joue à l'Orchestre d'Harmonie de la Ville de Belfort (OHVB).<br>
+                Je fais également partie du mouvement de scoutisme des EEUdF en tant que responsable.
+            <p>
+        </div>
+    </div>
+    <div id="body-container">
+        <h1 id="title-formation">Ma formation</h1>
+        <div id="container-formation">
+            <p class="indent">
+                Actuellement en deuxième année de <strong>DUT Informatique à Belfort</strong> (septembre 2020 - juillet 2022), j'apprends différents langages,
+                tels que le JavaScript, PHP, HTML, Java, C &#8230;.
+            </p>
+            <p>
+                J'ai cependant découvert par moi-même (bien que renforcé par les cours) le NodeJS avec la création
+                de plusieurs bots Discord, ou encore le JavaScript, dont nous avions effleuré la surface.
+            </p>
+            <p>
+                J'apprends actuellement le VueJS, framework web similaire à React ou Angular.
+                Des cours de développement Android sont aussi prévus dans le futur proche.
+            </p>
+            <p class="indent">
+                J'ai obtenu mon baccalauréat scientifique en juillet 2020, avec l'option Mathématiques.
+            </p>
+        </div>
+
+        <h1 id="title-competences">Mes compétences</h1>
+        <div id="container-competences">
+            <p class="indent">
+                Bien que manquant d'expérience professionnelle,
+                ma curiosité et ma formation m'ont apporté un certain nombre de connaissances.
+            </p>
+            <p class="indent">
+                J'ai appris la <strong>Programmation Orientée Objet</strong> (POO) et je l'utilise souvent,
+                notamment en Java, en JavaScript, TypeScript, et PHP.<br>
+                L'héritage, le polymorphisme, les interfaces et les énumérations ne me sont ainsi pas étrangers.
+            </p>
+            <p class="indent">
+                J'utilise <strong>git</strong> de façon générale, avec github, et nous avons utilisé l'interface de Gitlab en cours.
+                Ceci rend la collaboration avec d'autres sur un même projet une chose facile.
+            </p>
+            <p class="indent">
+                La <strong>méthode agile</strong> est tout autant une méthode à connaître pour la gestion de projet,
+                car bien que chronophage à mettre en place, elle montre des aspects positifs
+                une fois que le projet a démarré, tels que la prévision de la date de rendu de ce dernier,
+                ou encore la liberté de choix en tant que développeur de la tâche à réaliser.<br>
+                Nous l'avons utilisée dans plusieurs projets, en Java ou pour une application web (NodeJS / TypeScript)
+            </p>
+        </div>
+    </div>
 
 {% endblock %}
 
 {% block js %}
-<script>
-    $(".close").on('click', () => {
-        window.close();
-    });
-</script>
 {% endblock %}
