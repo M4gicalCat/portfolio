@@ -16,28 +16,9 @@
 
 <body>
 
-{% block window %}
-    {% if window == true %}
-        <div class="window">
-            <div class="window-bar">
-                {% if windowTitle is defined %}
-                    <span class="window-title">{{ windowTitle }}</span>
-                {% endif %}
-                <span class="diminish">−</span>
-                <span class="fullscreen">□</span>
-                <span class="close">✕</span>
-            </div>
-            <div class="screen">
-    {% endif %}
-
-    {% block body %}
-    {% endblock %}
-
-    {% if window == true %}
-            </div>
-        </div>
-    {% endif %}
+{% block body %}
 {% endblock %}
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
