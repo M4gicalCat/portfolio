@@ -15,17 +15,27 @@
 </head>
 
 <body>
-
+<div id="content-container">
 {% block body %}
 {% endblock %}
+</div>
+<footer>
+    <div id="contact">
+        <a href="contact"><button id="link-contact">Contactez-moi</button></a>
+        <span>17, rue Patte de Velours, 90850 Essert</span>
+        <span>philippefaisandier@gmail.com</span>
+    </div>
+    <span id="copyright"></span>
+</footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
 {% if window == true %}
-<script src="/scripts/window.js"></script>
 {% endif %}
-
+<script>
+    $("#copyright").text(`© ${new Date().getFullYear()} Philippe FAISANDIER`);
+</script>
 {% block js %}
 {% endblock %}
 </body>

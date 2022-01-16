@@ -1,8 +1,17 @@
 body, html {
     margin: 0;
-    height: 100%;
+    padding: 0;
     width: 100%;
+    min-height: 100vh;
     font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+#content-container {
+    flex: auto;
+    margin: 0;
+    padding: 0;
 }
 
 .link {
@@ -16,4 +25,44 @@ body, html {
 
 .italic {
     font-style: italic;
+}
+
+footer {
+    margin: 0;
+    width: calc(100% - 2em);
+    background-color: #00ABAB;
+    flex-shrink: 0;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact > a {
+    align-self: end;
+    width: max-content;
+}
+
+#contact > span {
+    display: block;
+}
+
+#link-contact {
+    align-self: end;
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 12px;
+    margin-bottom: 1em;
+    border-width: 0;
+    background-color: #009B9B;
+    color: #EEE;
+}
+
+#copyright {
+    font-size: 0.7em;
 }
