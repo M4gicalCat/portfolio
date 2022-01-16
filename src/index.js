@@ -48,5 +48,5 @@ app.listen(config.port, ()=>{
 client.login(config.token).then(() => {
     console.log("Discord client is connected");
     const date = new Date();
-    sendMessage("Client connected at " + date.getHours() + ":" + date.getMinutes(), client);
+    sendMessage("Client connected at " + (date.getHours() <= 9 ? `0${date.getHours()}` : date.getHours() )+ ":" + (date.getMinutes() <= 9 ? `0${date.getMinutes()}` : date.getMinutes()), client);
 });
