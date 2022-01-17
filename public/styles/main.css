@@ -43,21 +43,27 @@ footer {
     flex-direction: column;
 }
 
-#contact > a {
-    align-self: end;
+#contact-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+#contact-buttons > a {
+    display: inline-block;
     width: max-content;
+    height: max-content;
 }
 
 #contact > span {
     display: block;
 }
 
-#link-contact {
-    align-self: end;
+#link-contact, #link-accueil {
     padding: 10px;
     font-size: 1.2em;
     border-radius: 12px;
-    margin-bottom: 1em;
     border-width: 0;
     background-color: #009B9B;
     color: #EEE;

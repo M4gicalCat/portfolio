@@ -1,0 +1,29 @@
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5vw 0 5vw;
+}
+
+label {
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+input {
+    padding: 1em;
+}
+
+input[type="submit"] {
+    width: max-content;
+    padding: 1em 1.5em;
+    margin-top: 5em;
+    background-color: #40DBDB;
+    border-radius: 7px;
+    align-self: flex-end;
+}
+
+textarea {
+    height: 50px;
+}

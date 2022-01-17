@@ -5,10 +5,12 @@ const {Client, Intents} = require("discord.js");
 require("./controller/discord.controller");
 const client = new Client({intents: [Intents.FLAGS.GUILDS]});
 const discordController = require("./controller/discord.controller");
+const discordRoutes = require("./route/discord.routes");
 
 /* EXPRESS */
 const nunjucks = require("nunjucks");
 const express = require("express");
+const bodyParser = require("body-parser");
 const app = express();
 const expressController = require("./controller/express.controller");
 const {sendMessage} = require("./controller/discord.controller");
@@ -21,6 +23,9 @@ nunjucks.configure(__dirname + '/templates/', {
     express: app,
     watch: false
 });
+app.use(bodyParser.urlencoded({
+    extended: true
+}))
 app.use(express.static(__dirname + '/../public'));
 app.set('views', __dirname + '/templates');
 app.set('view engine', 'twig');
@@ -30,6 +35,8 @@ app.use((req, res, next) => {
     expressController.handleRouteConnection(req, client);
     return next();
 });
+
+app.use(discordRoutes(client));
 
 routers.forEach(r => app.use(r));
 

@@ -1,5 +1,32 @@
 {% extends "index.twig" %}
 
+{% block css %}
+<link rel="stylesheet" href="styles/contact.css">
+{% endblock %}
+
 {% block body %}
-yolo
+<form action="contact/sendMsg" method="post">
+    <label>Nom
+        <input type="text" name="name" id="name" placeholder="Faisandier" required/>
+    </label>
+    <label>Prénom
+        <input type="text" name="firstName" id="firstName" placeholder="Philippe" required/>
+    </label>
+    <label>Adresse mail
+        <input type="email" name="email" id="email" placeholder="philippefaisandier@gmail.com" required/>
+    </label>
+    <label for="message">Message</label>
+        <textarea name="message" id="message" oninput="auto_height(this)" required maxlength="1024"></textarea>
+
+    <input type="submit" value="Envoyer"/>
+</form>
+{% endblock %}
+
+{% block js %}
+<script>
+    function auto_height(elem) {
+        elem.style.height = "1px";
+        elem.style.height = (Math.max(50, elem.scrollHeight))+"px";
+    }
+</script>
 {% endblock %}
