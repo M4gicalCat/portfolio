@@ -1,12 +1,19 @@
+body {
+    background-color: #ddd;
+}
+p {
+    text-align: justify;
+}
+.indent {
+    text-indent: 2em;
+}
 #head-container {
     width: 100%;
     background-color: #00ABAB
 }
-
 #body-container {
     margin: 0 3vw;
 }
-
 .title-container {
     display: flex;
     align-items: center;
@@ -14,59 +21,138 @@
     padding: 0.5em;
 }
 
-p {
-    text-align: justify;
+@media screen and (max-width: 450px) {
+
+    .container {
+        border: 1px #00ABAB solid;
+        border-radius: 12px;
+        margin: 2em 0;
+    }
+
+    .container > h1 {
+         width: 80%;
+         position: relative;
+         left: 10%;
+         text-align: center;
+         border-bottom: 1px solid #00ABAB;
+     }
+
+    .container > p {
+        padding: 0 4vw;
+    }
+
+    img {
+        box-shadow: 0 0 transparent;
+        border: 0 transparent;
+    }
+
+    .container > h3 {
+        width: 50%;
+        position: relative;
+        left: 25%;
+        text-align: center;
+        border-bottom: 1px solid #00ABAB;
+        margin-top: 2em;
+        padding-bottom: 0.5em;
+    }
+
+    .date-experience {
+        width: 40%;
+        position: relative;
+        left: 30%;
+        text-align: center;
+        border-bottom: 1px solid #00ABAB;
+        padding: 0 !important;
+        margin: 0;
+    }
+
+    .title-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0.5em;
+    }
+
+    #about-me {
+        margin: 0 7vw;
+        text-align: justify;
+        padding-bottom: 5vh;
+    }
 }
 
-#about-me {
-    margin: 0 7vw;
-    text-align: justify;
-    padding-bottom: 5vh;
-}
+@media screen and (min-width: 451px) and (max-width: 1000px){
+    #body-container {
+        margin-left: 5%;
+        margin-right: 5%;
+        column-count: 2;
+        column-gap: 4em;
+        row-gap: 2em;
+    }
 
-.indent {
-    text-indent: 2em;
-}
+    .container {
+        background-color: white;
+        margin: 2em 0;
+        width: 100%;
+        border: 1px #00ABAB solid;
+        border-radius: 12px;
+        display: inline-block;
+    }
 
-.container {
-    border: 1px #00ABAB solid;
-    border-radius: 12px;
-    margin: 2em 0;
-}
+    .container:nth-child(odd) {
+        grid-column: 1 / 2;
+    }
 
-.container > h1 {
-    width: 80%;
-    position: relative;
-    left: 10%;
-    text-align: center;
-    border-bottom: 1px solid #00ABAB;
-}
+    .container:nth-child(even) {
+        grid-column: 2 / 3;
+    }
 
-.container > p {
-    padding: 0 4vw;
-}
+    .container > h1 {
+        width: 80%;
+        position: relative;
+        left: 10%;
+        text-align: center;
+        border-bottom: 1px solid #00ABAB;
+    }
 
-img {
-    box-shadow: 0 0 transparent;
-    border: 0 transparent;
-}
+    .container > p {
+        padding: 0 4vw;
+    }
 
-.container > h3 {
-    width: 50%;
-    position: relative;
-    left: 25%;
-    text-align: center;
-    border-bottom: 1px solid #00ABAB;
-    margin-top: 2em;
-    padding-bottom: 0.5em;
-}
+    img {
+        box-shadow: 0 0 transparent;
+        border: 0 transparent;
+    }
 
-.date-experience {
-    width: 40%;
-    position: relative;
-    left: 30%;
-    text-align: center;
-    border-bottom: 1px solid #00ABAB;
-    padding: 0 !important;
-    margin: 0;
+    .container > h3 {
+        width: 50%;
+        position: relative;
+        left: 25%;
+        text-align: center;
+        border-bottom: 1px solid #00ABAB;
+        margin-top: 2em;
+        padding-bottom: 0.5em;
+    }
+
+    .date-experience {
+        width: 40%;
+        position: relative;
+        left: 30%;
+        text-align: center;
+        border-bottom: 1px solid #00ABAB;
+        padding: 0 !important;
+        margin: 0;
+    }
+
+    .title-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0.5em;
+    }
+
+    #about-me {
+        margin: 0 7vw;
+        text-align: justify;
+        padding-bottom: 5vh;
+    }
 }

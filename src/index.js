@@ -6,6 +6,7 @@ require("./controller/discord.controller");
 const client = new Client({intents: [Intents.FLAGS.GUILDS]});
 const discordController = require("./controller/discord.controller");
 const discordRoutes = require("./route/discord.routes");
+const discord_init_slash_commands = require('./controller/discord_init_slash_commands');
 
 /* EXPRESS */
 const nunjucks = require("nunjucks");
@@ -52,8 +53,9 @@ app.listen(config.port, ()=>{
 
 /* DISCORD */
 
-client.login(config.token).then(() => {
+client.login(config.token).then(async () => {
     console.log("Discord client is connected");
+    //await discord_init_slash_commands.init(client);
     const date = new Date();
     sendMessage("Client connected at " + (date.getHours() <= 9 ? `0${date.getHours()}` : date.getHours() )+ ":" + (date.getMinutes() <= 9 ? `0${date.getMinutes()}` : date.getMinutes()), client);
 });

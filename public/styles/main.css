@@ -58,6 +58,7 @@ footer {
 
 #contact > span {
     display: block;
+    margin-bottom: 0.5vh;
 }
 
 #link-contact, #link-accueil {

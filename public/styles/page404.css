@@ -1,27 +1,13 @@
-.window {
-    width: max(33vw, 500px);
-    height: max(33vh, 400px);
-    position: absolute;
+#main {
+    text-align: center;
+}
+
+#content-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
-.screen {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.3em;
-}
-
-.center {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.bottom {
-    left: 50%;
-    top: 100vh;
-    transform: translate(-50%, -100%);
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+span, a {
+    display: inline-block;
 }

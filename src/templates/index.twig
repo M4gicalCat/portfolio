@@ -22,8 +22,8 @@
 <footer>
     <div id="contact">
         <div id="contact-buttons">
-            <a href="/"><button id="link-accueil">Accueil</button></a>
-            <a href="contact"><button id="link-contact">Contactez-moi</button></a>
+            <a href="/"><button id="link-accueil" class="pointer">Accueil</button></a>
+            <a href="contact"><button id="link-contact" class="pointer">Contactez-moi</button></a>
         </div>
         <span>17, rue Patte de Velours, 90850 Essert</span>
         <span>philippefaisandier@gmail.com</span>
@@ -33,9 +33,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-
-{% if window == true %}
-{% endif %}
 <script>
     $("#copyright").text(`© ${new Date().getFullYear()} Philippe FAISANDIER`);
 </script>
