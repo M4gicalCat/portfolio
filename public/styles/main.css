@@ -73,3 +73,10 @@ footer {
 #copyright {
     font-size: 0.7em;
 }
+
+@media screen and (min-width: 1001px) {
+    #contact > span, #copyright {
+        text-align: center;
+        width: 100%;
+    }
+}
