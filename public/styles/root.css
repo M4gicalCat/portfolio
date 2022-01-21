@@ -9,7 +9,10 @@ p {
 }
 #head-container {
     width: 100%;
-    background-color: #00ABAB
+    background-color: #00ABAB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #body-container {
     margin: 0 3vw;
@@ -20,8 +23,20 @@ p {
     flex-direction: column;
     padding: 0.5em;
 }
+.container {
+    background-color: white;
+}
 
-@media screen and (max-width: 450px) {
+#about-me > p{
+    text-align: center;
+}
+
+#about-me > h3 {
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
 
     .container {
         border: 1px #00ABAB solid;
@@ -42,6 +57,10 @@ p {
     }
 
     img {
+        max-width: 500px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
         box-shadow: 0 0 transparent;
         border: 0 transparent;
     }
@@ -80,7 +99,7 @@ p {
     }
 }
 
-@media screen and (min-width: 451px) and (max-width: 1000px){
+@media screen and (min-width: 701px) and (max-width: 1000px){
     #body-container {
         margin-left: 5%;
         margin-right: 5%;
@@ -90,20 +109,11 @@ p {
     }
 
     .container {
-        background-color: white;
         margin: 2em 0;
         width: 100%;
         border: 1px #00ABAB solid;
         border-radius: 12px;
         display: inline-block;
-    }
-
-    .container:nth-child(odd) {
-        grid-column: 1 / 2;
-    }
-
-    .container:nth-child(even) {
-        grid-column: 2 / 3;
     }
 
     .container > h1 {
@@ -154,5 +164,79 @@ p {
         margin: 0 7vw;
         text-align: justify;
         padding-bottom: 5vh;
+    }
+}
+
+@media screen and (min-width: 1001px){
+    body {
+        font-size: 1.1em;
+    }
+
+    #body-container {
+        margin-left: 5%;
+        margin-right: 5%;
+        column-count: 3;
+        column-gap: 4em;
+        row-gap: 2em;
+    }
+
+    .container {
+        background-color: white;
+        margin: 2em 0;
+        width: 100%;
+        border: 1px #00ABAB solid;
+        border-radius: 12px;
+        display: inline-block;
+        padding-bottom: 1.5em;
+    }
+
+    .container > h1 {
+        width: 80%;
+        position: relative;
+        left: 10%;
+        text-align: center;
+        border-bottom: 1px solid #00ABAB;
+    }
+
+    .container > p {
+        padding: 0 4vw;
+    }
+
+    img {
+        box-shadow: 0 0 transparent;
+        border: 0 transparent;
+    }
+
+    .container > h3 {
+        width: 50%;
+        position: relative;
+        left: 25%;
+        text-align: center;
+        border-bottom: 1px solid #00ABAB;
+        margin-top: 2em;
+        padding-bottom: 0.5em;
+    }
+
+    .date-experience {
+        width: 40%;
+        position: relative;
+        left: 30%;
+        text-align: center;
+        border-bottom: 1px solid #00ABAB;
+        padding: 0 !important;
+        margin: 0;
+    }
+
+    .title-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0.5em;
+    }
+
+    #about-me {
+        margin: 0 7vw;
+        padding-bottom: 5vh;
+        max-width: max(1000px, 50%);
     }
 }
