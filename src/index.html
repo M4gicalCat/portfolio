@@ -5,13 +5,19 @@
   <title>Philippe FAISANDIER</title>
   <link rel="stylesheet" href="index.css">
   <script>
-    const y = new Date().getFullYear();
-    const elems = document.getElementsByClassName('year');
-    for (const e of elems) e.innerHTML = y;
+    window.addEventListener('DOMContentLoaded', () => {
+      const y = new Date().getFullYear();
+      const elems = document.getElementsByClassName('year');
+      for (const e of elems) e.innerHTML = `${y}`;
+      document.getElementById('theme-toggle').addEventListener('click', () => {
+        document.body.classList.toggle('dark')
+      })
+    })
   </script>
 </head>
 <body>
 <h1>Philippe FAISANDIER</h1>
+<button id="theme-toggle"><span id="sun">🌞</span><span id="moon">🌓</span></button>
 <div class="card">
   <a href="http://resume.pfaisand.fr"><h3>Voir mon CV</h3></a>
   <div class="card-description">
@@ -62,6 +68,18 @@
       <p>Site réalisé en HTML/JS vanilla</p>
       <p>Lien github : <a target="_blank" href="https://github.com/M4gicalCat/fish">https://github.com/M4gicalCat/fish</a></p>
       <p>Voir le projet : <a target="_blank" href="https://fish.pfaisand.fr">https://fish.pfaisand.fr</a></p>
+    </div>
+    <p class="card-footer">
+      © 2022-<span class="year">2025</span> Philippe FAISANDIER
+    </p>
+  </div>
+  <div class="card">
+    <a href="https://github.com/M4gicalCat/PostgreSQL-to-TypeScript"><h3>PostgreSQL vers TypeScript</h3></a>
+    <div class="card-description">
+      <small>Projet personnel</small>
+      <p>Création d'interfaces TypeScript depuis une base de données PostgreSQL</p>
+      <p>Projet développé en Node.JS et TypeScript</p>
+      <p>Lien github : <a target="_blank" href="https://github.com/M4gicalCat/PostgreSQL-to-TypeScript">https://github.com/M4gicalCat/PostgreSQL-to-TypeScript</a></p>
     </div>
     <p class="card-footer">
       © 2022-<span class="year">2025</span> Philippe FAISANDIER
